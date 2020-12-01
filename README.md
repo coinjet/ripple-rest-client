@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/ripple/ripple-rest-client.svg)](https://travis-ci.org/ripple/ripple-rest-client)
+[![Build Status](https://travis-ci.org/xdv/divvy-rest-client.svg)](https://travis-ci.org/xdv/divvy-rest-client)
 
-## Ripple REST Node.js Client Library
+## Divvy REST Node.js Client Library
 
-The Ripple REST Api Server software simplifies interaction with the Ripple payment network. This libraryaims to provide the most simplified service for using the REST api in node.js.
+The Divvy REST Api Server software simplifies interaction with the Divvy payment network. This libraryaims to provide the most simplified service for using the REST api in node.js.
 
 ### Installation
 
