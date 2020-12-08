@@ -5,8 +5,8 @@ node_js:
 before_install:
 install:
   - npm install
-script:
-  - npm test
+# script:
+#  - npm test
 notifications:
   email: false
   slack:
