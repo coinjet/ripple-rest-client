@@ -5,9 +5,9 @@ var assert = require('chai').assert;
 var account_info = require('./fixtures/account_info')();
 var errorFixture = require('./fixtures/set_trust_lines').error;
 var success = require('./fixtures/set_trust_lines').success;
-var SECRET = process.env.RIPPLE_ACCOUNT_SECRET;
+var SECRET = process.env.DIVVY_ACCOUNT_SECRET;
 
-describe('Ripple REST Client setTrustLines', function() {
+describe('Divvy REST Client setTrustLines', function() {
   var client;
 
   beforeEach(function(done) {

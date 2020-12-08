@@ -7,10 +7,10 @@ var uuid = require('node-uuid');
 var success = require('./fixtures/send_and_confirm_payment').success;
 var errorFixture = require('./fixtures/send_and_confirm_payment').error;
 
-var SECRET = process.env.RIPPLE_ACCOUNT_SECRET;
+var SECRET = process.env.DIVVY_ACCOUNT_SECRET;
 
-describe('Ripple REST Client sendPayment', function() {
-  var payment, faildPayment, nonXRPayment, client;
+describe('Divvy REST Client sendPayment', function() {
+  var payment, faildPayment, nonXDVPayment, client;
 
   beforeEach(function(done) {
     client = new Client({
@@ -42,7 +42,7 @@ describe('Ripple REST Client sendPayment', function() {
           issuer: account_info.source_account
         },
         partial_payment: false,
-        no_direct_ripple: false,
+        no_direct_divvy: false,
         destination_tag: '0'
       };
 
@@ -65,13 +65,13 @@ describe('Ripple REST Client sendPayment', function() {
           source_account: 'rMinhWxZz4jeHoJGyddtmwg6dWhyqQKtJz',
           source_amount: {
             value: '.005',
-            currency: 'XRP',
+            currency: 'XDV',
             issuer: ''
           },
           destination_account: '',
           destination_amount: {},
           partial_payment: false,
-          no_direct_ripple: false
+          no_direct_divvy: false
         };
 
         var paymentObj = {

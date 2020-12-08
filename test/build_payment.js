@@ -7,7 +7,7 @@ var _ = require('lodash');
 var success = require('./fixtures/build_payment').success;
 var errorFixture = require('./fixtures/build_payment').error;
 
-describe('Ripple REST Client buildPayment', function() {
+describe('Divvy REST Client buildPayment', function() {
   var client;
 
   beforeEach(function(done) {

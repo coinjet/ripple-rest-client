@@ -8,7 +8,7 @@ var _ = require('lodash');
 var errors = require('./lib/errors');
 
 function Client (options) {
-  this.api = options.api || 'https://api.ripple.com/';
+  this.api = options.api || 'https://api.xdv.io/';
   this.account = options.account;
   this.secret = options.secret || '';
   this.lastPaymentHash = options.lastPaymentHash;
@@ -31,7 +31,7 @@ Client.prototype.ping = function(callback) {
   });
 };
 
-// Deprecated: not called in Ripple Connect
+// Deprecated: not called in Divvy Connect
 Client.prototype.getTransactionFee = function(callback) {
   var url = this.api + 'v1/transaction-fee';
 
@@ -47,7 +47,7 @@ Client.prototype.getTransactionFee = function(callback) {
   });
 };
 
-// Deprecated: not called in Ripple Connect
+// Deprecated: not called in Divvy Connect
 Client.prototype.generateUUID = function(callback) {
   var url = this.api + 'v1/uuid';
 
@@ -63,7 +63,7 @@ Client.prototype.generateUUID = function(callback) {
   });
 };
 
-// Deprecated: not called in Ripple Connect
+// Deprecated: not called in Divvy Connect
 Client.prototype.generateNewWallet = function(callback) {
   var url = this.api + 'v1/wallet/new';
 
@@ -185,7 +185,7 @@ Client.prototype.getNotifications = function(callback) {
   });
 };
 
-// Deprecated: not called in Ripple Connect
+// Deprecated: not called in Divvy Connect
 Client.prototype.setHash = function(paymentHash, callback) {
   this.lastPaymentHash = paymentHash;
 };
@@ -223,7 +223,7 @@ Client.prototype.getPayments = function(account, callback) {
   });
 };
 
-// Deprecated: not called in Ripple Connect
+// Deprecated: not called in Divvy Connect
 Client.prototype.getTransaction = function(hash, callback) {
   var url = this.api + 'v1/transactions/' + hash;
 
@@ -239,7 +239,7 @@ Client.prototype.getTransaction = function(hash, callback) {
   });
 };
 
-// Deprecated: not called in Ripple Connect
+// Deprecated: not called in Divvy Connect
 Client.prototype.getServerStatus = function(opts, callback) {
   var url = this.api + 'v1/server';
 
@@ -255,7 +255,7 @@ Client.prototype.getServerStatus = function(opts, callback) {
   });
 };
 
-// Deprecated: not called in Ripple Connect
+// Deprecated: not called in Divvy Connect
 Client.prototype.updateAccountSettings = function(opts, callback) {
 
   var account = opts.account || this.account;
@@ -279,7 +279,7 @@ Client.prototype.updateAccountSettings = function(opts, callback) {
   });
 };
 
-// Deprecated: not called in Ripple Connect
+// Deprecated: not called in Divvy Connect
 Client.prototype.getPaymentStatus = function(statusUrl, callback) {
   http
   .get(statusUrl)
@@ -338,11 +338,11 @@ Client.prototype.pollPaymentStatus = function(payment, callback) {
     self._getAndHandlePaymentStatus(payment.status_url, callback,
       self._getAndHandlePaymentStatus.bind(this));
   } else {
-    callback(new Error('RippleRestError:StatusUrlUnavailable'));
+    callback(new Error('DivvyRestError:StatusUrlUnavailable'));
   }
 };
 
-// Deprecated: not called in Ripple Connect
+// Deprecated: not called in Divvy Connect
 Client.prototype.setTrustLines = function(options, callback) {
   var account = options.account || this.account;
   var httpOptions = {
@@ -371,7 +371,7 @@ Client.prototype.setTrustLines = function(options, callback) {
 
 };
 
-// Deprecated: not called in Ripple Connect
+// Deprecated: not called in Divvy Connect
 Client.prototype.getTrustLines = function(options, callback) {
   var account = options.fromAccount || this.account;
   var url = this.api + 'v1/accounts/' + account + '/trustlines';
@@ -402,7 +402,7 @@ Client.prototype.getTrustLines = function(options, callback) {
   });
 };
 
-// Deprecated: not called in Ripple Connect
+// Deprecated: not called in Divvy Connect
 Client.prototype.sendAndConfirmPayment = function(opts, callback) {
   var self = this;
 

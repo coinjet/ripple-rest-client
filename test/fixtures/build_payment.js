@@ -20,7 +20,7 @@ exports.success = function(args) {
     invoice_id: args.invoice_id,
     paths: args.paths,
     partial_payment: args.partial_payment,
-    no_direct_ripple: args.no_direct_ripple
+    no_direct_divvy: args.no_direct_divvy
   };
 };
 
@@ -29,6 +29,6 @@ exports.error = function() {
     success: false,
     error_type: 'invalid_request',
     error: 'restINVALID_PARAMETER',
-    message: 'Parameter is not a valid Ripple address: destination_account'
+    message: 'Parameter is not a valid Divvy address: destination_account'
   };
 };

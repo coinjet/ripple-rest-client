@@ -6,7 +6,7 @@ exports.success = function(args) {
     settings: {
       require_destination_tag: args.settings.require_destination_tag,
       require_authorization: args.settings.require_authorization,
-      disallow_xrp: args.settings.disallow_xrp
+      disallow_xdv: args.settings.disallow_xdv
     },
     hash: args.hash,
     ledger: args.ledger,

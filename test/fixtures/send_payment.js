@@ -13,6 +13,6 @@ exports.error = function() {
     success: false,
     error_type: 'invalid_request',
     error: 'restINVALID_PARAMETER',
-    message: 'Invalid parameter: source_account. Must be a valid Ripple address'
+    message: 'Invalid parameter: source_account. Must be a valid Divvy address'
   };
 };

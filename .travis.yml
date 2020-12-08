@@ -9,6 +9,6 @@ script:
   - npm test
 notifications:
   email: false
-env:
-  global:
-  - secure: Vj9kSmpP9pnK4mMyqGzQSlO0LaVSoVWJnLAAGI+bJS6xYAA7Ne9VHoTeZsPZUWJdd9OqnBqlRNLweFf8G8Ddu7RQrqeBz6Cczv5feOnyuGak2ItSI5ZfogY87tLmj0CbfQkN4+ji/a5hwq+4lG5DLYtfi9uzN5KmkV61LR+nwCA=
+  slack:
+    rooms:
+    - kedia:yBh1h5UbplmejFa7vTou1MD0#xdv

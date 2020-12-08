@@ -19,7 +19,7 @@ exports.success = function(args) {
     },
     invoice_id: args.invoice_id,
     paths: args.paths,
-    no_direct_ripple: args.no_direct_ripple,
+    no_direct_divvy: args.no_direct_divvy,
     partial_payment: args.partial_payment,
     direction: args.direction,
     result: args.result,

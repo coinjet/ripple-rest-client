@@ -3,7 +3,7 @@
 var Client = require('../');
 var assert = require('chai').assert;
 
-describe('Ripple REST Client Get Transaction Fee', function() {
+describe('Divvy REST Client Get Transaction Fee', function() {
 
   it('should successfully get transaction fee', function(done) {
     var client = new Client({});

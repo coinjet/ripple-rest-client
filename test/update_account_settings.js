@@ -5,9 +5,9 @@ var assert = require('chai').assert;
 var account_info = require('./fixtures/account_info')();
 var errorFixture = require('./fixtures/update_account_settings').error;
 var success = require('./fixtures/update_account_settings').success;
-var SECRET = process.env.RIPPLE_ACCOUNT_SECRET;
+var SECRET = process.env.DIVVY_ACCOUNT_SECRET;
 
-describe('Ripple REST Client Update Account Settings', function() {
+describe('Divvy REST Client Update Account Settings', function() {
   var client;
 
   beforeEach(function(done) {
@@ -30,7 +30,7 @@ describe('Ripple REST Client Update Account Settings', function() {
           secret: account_info.source_account_secret,
           settings: {
             require_destination_tag: false,
-            disallow_xrp: false
+            disallow_xdv: false
           }
         }
       };

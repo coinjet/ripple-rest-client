@@ -21,7 +21,7 @@ exports.success = function(args) {
       },
       invoice_id: args.payment.invoice_id,
       paths: args.payment.paths,
-      no_direct_ripple: args.payment.no_direct_ripple,
+      no_direct_divvy: args.payment.no_direct_divvy,
       partial_payment: args.payment.partial_payment,
       direction: args.payment.direction,
       result: args.payment.result,
@@ -44,6 +44,6 @@ exports.error = function() {
     success: false,
     error_type: 'invalid_request',
     error: 'restINVALID_PARAMETER',
-    message: 'Invalid parameter: destination_account. Must be a valid Ripple address'
+    message: 'Invalid parameter: destination_account. Must be a valid Divvy address'
   };
 };

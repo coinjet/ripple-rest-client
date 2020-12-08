@@ -6,7 +6,7 @@ var account_info = require('./fixtures/account_info')();
 var success = require('./fixtures/get_balance').success;
 var errorFixture = require('./fixtures/get_balance').error;
 
-describe('Ripple REST Client Get Balances', function() {
+describe('Divvy REST Client Get Balances', function() {
 
   it('should get balances', function(done) {
 

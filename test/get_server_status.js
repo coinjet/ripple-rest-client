@@ -5,7 +5,7 @@ var assert = require('chai').assert;
 var account_info = require('./fixtures/account_info')();
 var success = require('./fixtures/get_server_status').success;
 
-describe('Ripple REST Client Get Server Status', function() {
+describe('Divvy REST Client Get Server Status', function() {
   var client;
 
   beforeEach(function(done) {

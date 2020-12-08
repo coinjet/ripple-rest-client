@@ -4,7 +4,7 @@ var Client = require('../');
 var assert = require('chai').assert;
 var account_info = require('./fixtures/account_info')();
 
-describe('Ripple REST Client Generate UUID', function() {
+describe('Divvy REST Client Generate UUID', function() {
   it('should successfully get UUID', function(done) {
     var client = new Client({
       account: account_info.source_account

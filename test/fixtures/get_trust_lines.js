@@ -19,6 +19,6 @@ exports.error = function(args) {
     success: false,
     error_type: 'invalid_request',
     error: 'restINVALID_PARAMETER',
-    message: 'Parameter is not a valid Ripple address: account'
+    message: 'Parameter is not a valid Divvy address: account'
   };
 };

@@ -2,17 +2,17 @@
 
 ## Divvy REST Node.js Client Library
 
-The Divvy REST Api Server software simplifies interaction with the Divvy payment network. This libraryaims to provide the most simplified service for using the REST api in node.js.
+The Divvy REST Api Server software simplifies interaction with the Divvy payment network. This library aims to provide the most simplified service for using the REST api in node.js.
 
 ### Installation
 
-    npm install ripple-rest-client
+    npm install divvy-rest-client
 
 #### Usage
     
-    var RippleRestClient = require("ripple-rest-client").Client;
+    var DivvyRestClient = require("divvy-rest-client").Client;
     
-    var client = new RippleRestClient({
+    var client = new DivvyRestClient({
       api: 'http://localhost:5990',
       account: 'rw6qnMHxqg1m3xki7Y89H45BjU7LnAYyoL',
       secret: 'shgL7M1kbgrBkkkQwwRGHBmbLamxe' 
@@ -34,9 +34,9 @@ Sending a Payment:
 
 #### Proposed API actions
 
-http://dev.ripple.com/rest-api-tool.html#get-payment-history
+http://dev.xdv.io/rest-api-tool.html#get-payment-history
 
-    const ripple = new RippleAPI({
+    const divvy = new DivvyAPI({
       adapter: 'rest',
       url: 'http://127.0.0.1:5990'
     })
@@ -47,27 +47,27 @@ The following API methods return an instance of Promise
 
 Generate Account
 
-    ripple.generateAccount()
+    divvy.generateAccount()
 
 Get Account Balances
 
-    ripple.getAccountBalances({
+    divvy.getAccountBalances({
       account: 'r4EwBWxrx5HxYRyisfGzMto3AT8FZiYdWk'
     })
 
 Get Account Settings
 
-    ripple.getAccountSettings({
+    divvy.getAccountSettings({
       account: 'r4EwBWxrx5HxYRyisfGzMto3AT8FZiYdWk'
     })
 
 Update Account Settings
 
-    ripple.updateAccountSettings({
+    divvy.updateAccountSettings({
       account: 'r4EwBWxrx5HxYRyisfGzMto3AT8FZiYdWk'
       require_destination_tag: false,
       require_authorization: false,
-      disallow_xrp: true,
+      disallow_xdv: true,
       disable_master: false,
       email_hash: "98b4375e1d753e5b91627516f6d70977"
       secret: 'sssssssssssssssssssssss'
@@ -75,7 +75,7 @@ Update Account Settings
 
 Prepare Payment
 
-    ripple.preparePayment({
+    divvy.preparePayment({
       source_account: 'r4EwBWxrx5HxYRyisfGzMto3AT8FZiYdWk',
       source_amount: {
         "value": "1",
@@ -92,7 +92,7 @@ Prepare Payment
 
 Submit Payment
 
-    ripple.submitPayment({
+    divvy.submitPayment({
       source_account: "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
       source_amount: {
         "value": "1",
@@ -112,21 +112,21 @@ Submit Payment
 
 Confirm Payment
 
-    ripple.confirmPayment({
+    divvy.confirmPayment({
       account: 'r4EwBWxrx5HxYRyisfGzMto3AT8FZiYdWk',
       hash: 'A7C3B03663C205C84C7A91730A3E7874A88969B50D80471D8E62BFC04D2EA07A'
     }) 
 
 Get Payment History
 
-    ripple.getPaymentHistory({
+    divvy.getPaymentHistory({
       account: 'r4EwBWxrx5HxYRyisfGzMto3AT8FZiYdWk',
       direction: 'incoming'
     })
 
 Get Trustlines
 
-    ripple.getTrustlines({
+    divvy.getTrustlines({
       account: 'r4EwBWxrx5HxYRyisfGzMto3AT8FZiYdWk',
       counterparty: 'rMwjYedjc7qqtKYVLiAccJSmCwih4LnE2q'
       currency: 'USD'
@@ -134,7 +134,7 @@ Get Trustlines
 
 Grant Trustline
 
-    ripple.grantTrustline({
+    divvy.grantTrustline({
       limit: 110,
       currency: "USD",
       counterparty: "rMwjYedjc7qqtKYVLiAccJSmCwih4LnE2q",
@@ -144,18 +144,18 @@ Grant Trustline
 
 Check Notifications
 
-    ripple.checkNotifications({
+    divvy.checkNotifications({
       account: 'r4EwBWxrx5HxYRyisfGzMto3AT8FZiYdWk',
       hash: 'A7C3B03663C205C84C7A91730A3E7874A88969B50D80471D8E62BFC04D2EA07A'
     })
 
-Retrive Ripple Transaction
+Retrive Divvy Transaction
 
-    ripple.retrieveRippleTransaction({
+    divvy.retrieveDivvyTransaction({
       hash: 'A7C3B03663C205C84C7A91730A3E7874A88969B50D80471D8E62BFC04D2EA07A'
     })
 
 Generate UUID
 
-    ripple.generateUUID()
+    divvy.generateUUID()
 

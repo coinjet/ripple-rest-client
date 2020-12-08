@@ -6,7 +6,7 @@ var account_info = require('./fixtures/account_info')();
 var errorFixture = require('./fixtures/get_notification').error;
 var success = require('./fixtures/get_notification').success;
 
-describe('Ripple REST Client Get Notification', function() {
+describe('Divvy REST Client Get Notification', function() {
   var client;
   var payments;
 

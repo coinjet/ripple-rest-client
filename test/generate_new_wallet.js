@@ -3,7 +3,7 @@
 var Client = require('../');
 var assert = require('chai').assert;
 
-describe('Ripple REST Client Generate Build Payment', function() {
+describe('Divvy REST Client Generate Build Payment', function() {
   var client;
 
   beforeEach(function(done) {
@@ -16,7 +16,7 @@ describe('Ripple REST Client Generate Build Payment', function() {
     done();
   });
 
-  it('should generate a new ripple wallet with secret', function(done) {
+  it('should generate a new divvy wallet with secret', function(done) {
 
     client.generateNewWallet(function(error, response) {
       assert(!error, 'API call failed');

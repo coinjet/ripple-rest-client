@@ -7,7 +7,7 @@ var success = require('./fixtures/get_trust_lines').success;
 var errorFixture = require('./fixtures/get_trust_lines').error;
 var _ = require('lodash');
 
-describe('Ripple REST Client Get Trustlines', function() {
+describe('Divvy REST Client Get Trustlines', function() {
   var client;
 
   beforeEach(function(done) {
